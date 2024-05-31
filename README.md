@@ -1,6 +1,9 @@
 # NOISY
 Whatsapp Notification System
 
+#### Requirement
+- PHP 5.6 ;)
+
 ####  Daftar Kirim
 ![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/1_noisy_daftar_kirim.png?raw=true)
 

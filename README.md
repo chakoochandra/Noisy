@@ -2,13 +2,17 @@
 Whatsapp Notification System
 
 ####  Daftar Kirim
-![alt text](https://dialogwa.id/images/1/1_noisy_daftar_kirim.png)
+![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/1_noisy_daftar_kirim.png?raw=true)
 
 ####  Riwayat Notifikasi
-![alt text](https://dialogwa.id/images/1/2_noisy_riwayat_notif.png)
+![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/2_noisy_riwayat_notif.png?raw=true)
 
 ####  Progress Kirim
-![alt text](https://dialogwa.id/images/1/3_noisy_sent.png)
+![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/3_noisy_sent.png?raw=true)
+
+####  Notifikasi Terkirim
+![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/4_noisy_received.png?raw=true)
+
 
 -------------------------------
 

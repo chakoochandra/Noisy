@@ -164,7 +164,7 @@ class Api extends Core_Controller
 				}
 			}
 
-			if (is_development() && $x = count(cleansePhoneNumbers(WA_TEST_TARGET))) {
+			if (is_development() && $x == count(cleansePhoneNumbers(WA_TEST_TARGET))) {
 				$progress = 100;
 				break;
 			}

@@ -22,7 +22,7 @@ class Core_Controller extends CI_Controller
         parent::__construct();
 
         $this->notifs = get_notifs();
-        
+
         foreach ($this->notifs as $type => $title) {
             $this->types[$title] = $title;
             $this->typesText[$type] = $title;
@@ -70,6 +70,10 @@ class Notif_Controller extends Core_Controller
 
     public function check_gateway()
     {
+        if (!DIALOGWA_API_URL || !DIALOGWA_SESSION || !DIALOGWA_TOKEN) return $this->set_content_type([
+            'status' => false,
+            'message' => 'DIALOGWA_API_URL, DIALOGWA_SESSION, dan DIALOGWA_TOKEN harus diset pada tabel configs'
+        ]);
         return $this->set_content_type(hit_api(DIALOGWA_API_URL . '/session/' . DIALOGWA_SESSION, 'get', null, DIALOGWA_TOKEN));
     }
 

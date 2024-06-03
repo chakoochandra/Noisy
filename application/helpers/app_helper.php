@@ -146,31 +146,16 @@ if (!function_exists('guzzle_form_urlencoded')) {
         $request = new GuzzleHttp\Psr7\Request(strtoupper($type), $endpoint);
 
         try {
-            if (!$token) {
-                return api_login($client)->then(function ($token) use ($client, $request, $data) {
-                    $promise = $client->sendAsync($request, [
-                        'headers' => [
-                            'Content-Type' => 'application/json',
-                            'Authorization' => 'Bearer ' . $token,
-                        ],
-                        'json' => $data,
-                    ]);
-                    return $promise->then(function ($response) {
-                        return api_return(true, $response->getBody()->getContents(), $response->getStatusCode());
-                    });
-                })->wait();
-            } else {
-                $promise = $client->sendAsync($request, [
-                    'headers' => [
-                        'Content-Type' => 'application/json',
-                        'Authorization' => 'Bearer ' . $token,
-                    ],
-                    'json' => $data,
-                ]);
-                return $promise->then(function ($response) {
-                    return api_return(true, $response->getBody()->getContents(), $response->getStatusCode());
-                })->wait();
-            }
+            $promise = $client->sendAsync($request, [
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'Authorization' => 'Bearer ' . $token,
+                ],
+                'json' => $data,
+            ]);
+            return $promise->then(function ($response) {
+                return api_return(true, $response->getBody()->getContents(), $response->getStatusCode());
+            })->wait();
         } catch (GuzzleHttp\Exception\RequestException $exception) {
             if ($exception->hasResponse()) {
                 $statusCode = $exception->getResponse()->getStatusCode();
@@ -190,36 +175,6 @@ if (!function_exists('guzzle_form_urlencoded')) {
             return api_return(false, $exception->getMessage());
         }
         // }
-    }
-
-    function api_login($client)
-    {
-        // Cek token yang tersimpan di sesi
-        if (isset($_SESSION['jwt_token']) && isset($_SESSION['token_exp']) && $_SESSION['token_exp'] > time()) {
-            return GuzzleHttp\Promise\promise_for($_SESSION['jwt_token']);
-        }
-
-        return $client->postAsync(API_URL . '/login', [
-            'headers' => ['Content-Type' => 'application/json'],
-            'json' => ['email' => API_USERNAME, 'password' => API_PASSWORD],
-        ])->then(function ($response) {
-            $loginData = json_decode($response->getBody()->getContents(), true);
-            if (isset($loginData['status']) && $loginData['status']) {
-                $token = $loginData['token'];
-                $_SESSION['jwt_token'] = $token;
-                $_SESSION['token_exp'] = time() + $loginData['expire_in'];
-                return $token;
-            }
-            return null;
-        })->otherwise(function ($exception) {
-            if ($exception instanceof GuzzleHttp\Exception\RequestException) {
-                return null;
-            }
-            throw $exception;
-        })->otherwise(function ($exception) {
-            // Handle any other unexpected exceptions here
-            return null; // Or you can rethrow the exception if needed
-        });
     }
 
     function api_return($status, $response, $code = null)

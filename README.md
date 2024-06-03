@@ -1,5 +1,7 @@
 # NOISY
-Whatsapp Notification System
+Whatsapp Notification System. 
+
+Didevelop untuk Pengadilan Agama. Untuk Peradilan lainnya, silakan modifikasi sesuai kebutuhan dan data masing2. Boleh Pull Request kalau mau sharing hasil modifikasi.
 
 #### Requirement
 - PHP 5.6 ;)

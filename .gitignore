@@ -24,4 +24,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 
 application/config/constants.php
-index.php
+/index.php

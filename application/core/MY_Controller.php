@@ -74,7 +74,14 @@ class Notif_Controller extends Core_Controller
             'status' => false,
             'message' => 'DIALOGWA_API_URL, DIALOGWA_SESSION, dan DIALOGWA_TOKEN harus diset pada tabel configs'
         ]);
-        return $this->set_content_type(hit_api(DIALOGWA_API_URL . '/session/' . DIALOGWA_SESSION, 'get', null, DIALOGWA_TOKEN));
+
+        $result = hit_api(DIALOGWA_API_URL . '/session/' . DIALOGWA_SESSION, 'get', null, DIALOGWA_TOKEN);
+        if (!$result['status']) {
+            $response = json_decode($result['response'], 1);
+            $result['message'] = $response['message'] . ' | ' . DIALOGWA_API_URL . ' | ' . DIALOGWA_SESSION . ' | ' .
+                substr(DIALOGWA_TOKEN, 0, 10) . '.....' . substr(DIALOGWA_TOKEN, -10);
+        }
+        return $this->set_content_type($result);
     }
 
     function next()

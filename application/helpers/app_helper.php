@@ -40,7 +40,7 @@ if (!function_exists('get_client_ip')) {
 if (!function_exists('is_development')) {
     function is_development()
     {
-        return ENVIRONMENT == 'development';
+        return ENVIRONMENT != 'production';
     }
 }
 

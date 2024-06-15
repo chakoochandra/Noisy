@@ -30,7 +30,7 @@ class Whatsapp extends Notif_Controller
 		$config = $this->pagination->set([
 			'base_url' => base_url('whatsapp/index'),
 			'total_rows' => $this->whatsapp->num_rows($where),
-			'per_page' => 50,
+			'per_page' => 20,
 		]);
 
 		$this->vars = [
@@ -63,8 +63,6 @@ class Whatsapp extends Notif_Controller
 			'placeholder' => 'Cari teks',
 			'value' => $this->input->get('teks'),
 		];
-
-		$this->breadcrumb->add('Notifikasi Whatsapp');
 
 		$this->load->vars($this->vars);
 

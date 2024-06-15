@@ -3,9 +3,6 @@ Whatsapp Notification System.
 
 Didevelop untuk Pengadilan Agama. Untuk Peradilan lainnya, silakan modifikasi sesuai kebutuhan dan data masing2. Boleh Pull Request kalau mau sharing hasil modifikasi.
 
-#### Requirement
-- PHP 5.6 ;)
-
 ####  Daftar Kirim
 ![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/1_noisy_daftar_kirim.png?raw=true)
 
@@ -30,18 +27,10 @@ Didevelop untuk Pengadilan Agama. Untuk Peradilan lainnya, silakan modifikasi se
 Duplikasi file index.example.php, file hasil duplikat rename menjadi index.php
 
 
-###  MODIFIKASI KONFIGURASI FILE
+###  MODIFIKASI DATABASE.PHP
 1. Masuk ke folder application\config\
-2. Duplikasi file constants.example.php, file hasil duplikat rename menjadi constants.php
-3. Pada baris paling bawah cari baris berikut dan modifikasi value sesuai environment Anda :
-
-```
-defined('DB_HOST') or define('DB_HOST', 'ip_local');
-defined('DB_USER') or define('DB_USER', 'nama_user_db');
-defined('DB_PASSWORD') or define('DB_PASSWORD', 'password_db');
-defined('DB_SIPP') or define('DB_SIPP', 'nama_db_sipp');
-defined('DB_NOTIFIKASI') or define('DB_NOTIFIKASI', 'noisy');
-```
+2. Duplikasi file database.example.php, file hasil duplikat rename menjadi database.php
+3. Set hostname, database, username, dan password database noisy dan SIPP
 
 
 ###  SQL

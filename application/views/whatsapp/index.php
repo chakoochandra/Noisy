@@ -2,7 +2,7 @@
     <?php echo filter_form($form, 'whatsapp') ?>
 </div>
 
-<?php //echo $this->pagination->get_summary() ?>
+<?php echo $this->pagination->get_summary() ?>
 
 <table class="table table-hover table-sticky">
     <thead>
@@ -33,7 +33,7 @@
     </tbody>
 </table>
 
-<?php //echo $this->pagination->create_links() ?>
+<?php echo $this->pagination->create_links() ?>
 
 <script src="<?php echo base_url('assets/js/readmore.js') ?>"></script>
 

@@ -50,7 +50,6 @@ class Core_Controller extends CI_Controller
 
             return $this->set_content_type(array_merge($data, [
                 'content' => $this->load->view($view, '', true),
-                'breadcrumb' => $this->breadcrumb->render(),
                 'csrf_token_name' => $this->security->get_csrf_token_name(),
                 'csrf_hash' => $this->security->get_csrf_hash(),
             ]));
@@ -65,7 +64,6 @@ class Notif_Controller extends Core_Controller
         parent::__construct();
 
         $this->load->model('Whatsapp_Model', 'whatsapp');
-        $this->breadcrumb->add('Beranda', base_url());
     }
 
     public function check_gateway()
@@ -78,7 +76,7 @@ class Notif_Controller extends Core_Controller
         $result = hit_api(DIALOGWA_API_URL . '/session/' . DIALOGWA_SESSION, 'get', null, DIALOGWA_TOKEN);
         if (!$result['status']) {
             $response = json_decode($result['response'], 1);
-            $result['message'] = $response['message'] . ' | ' . DIALOGWA_API_URL . ' | ' . DIALOGWA_SESSION . ' | ' .
+            $result['message'] = (isset($response['message']) ? $response['message'] : 'Cek url gateway') . ' | ' . DIALOGWA_API_URL . ' | ' . DIALOGWA_SESSION . ' | ' .
                 substr(DIALOGWA_TOKEN, 0, 10) . '.....' . substr(DIALOGWA_TOKEN, -10);
         }
         return $this->set_content_type($result);
@@ -94,8 +92,6 @@ class Notif_Controller extends Core_Controller
             'view' => 'notif/index',
             'data' => $this->_prepareData($type),
         ];
-
-        $this->breadcrumb->add('Notifikasi Selanjutnya');
 
         $this->load->vars($this->vars);
 
@@ -200,7 +196,6 @@ class Notif_Controller extends Core_Controller
         $config = $this->$paginationVar->set([
             'base_url' => base_url("whatsapp/notif/$type"),
             'total_rows' => $count,
-            'per_page' => 500,
         ]);
 
         return [

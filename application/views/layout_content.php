@@ -12,15 +12,8 @@
                 </div>
             <?php endif ?>
 
-            <div class="row mb-2">
-                <div class="col-sm-6 my-breadcrumb">
-                    <?php
-                    echo $this->breadcrumb->render();
-                    ?>
-                </div>
-                <div class="col-sm-6 m-0">
-                    <a class="float-right btn btn-outline-primary chip realtime-clock text-xs mb-0"><?php echo getLocaleTime(strftime("%A, %d %B %Y %H:%M:%S", time())) ?></a>
-                </div>
+            <div class="d-flex flex-row-reverse">
+                <a class="float-right btn btn-outline-primary chip realtime-clock text-xs mb-0"><?php echo getLocaleTime(strftime("%A, %d %B %Y %H:%M:%S", time())) ?></a>
             </div>
         </div>
     <?php endif ?>

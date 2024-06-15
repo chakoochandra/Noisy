@@ -44,11 +44,9 @@ class MY_Pagination extends CI_Pagination
         $config['cur_page'] = $config['cur_page'] ?: $this->first_page;
         $CI->session->set_flashdata(removeSpecialChars($config['base_url']), $config['cur_page']);
 
-        //config for bootstrap pagination class integration
-        // $config['first_url'] = base_url().'controller/method/?'.$_SERVER['QUERY_STRING'];
         $config['first_url'] = $config['base_url'];
         $config['per_page'] = isset($config['per_page']) ? $config['per_page'] : $this->per_page;
-        $config['offset'] = max(0, $config['cur_page'] - 1) * $config['per_page'];
+        $config['offset'] = max(0, (is_int(intval($config['cur_page'])) ? $config['cur_page'] : 0) - 1) * $config['per_page'];
         $config['num_links'] = floor($config['total_rows'] / $config['per_page']);
         $config['use_page_numbers'] = true;
         $config['reuse_query_string'] = true;
@@ -70,8 +68,6 @@ class MY_Pagination extends CI_Pagination
         $config['cur_tag_close'] = '</span></li>';
         $config['num_tag_open'] = '<li class="page-item">';
         $config['num_tag_close'] = '</li>';
-        // $config['page_query_string'] = true;
-        // $config['query_string_segment'] = 'page'; // the query string param for the page numbers
 
         $this->initialize($config);
 

@@ -46,7 +46,7 @@ class MY_Pagination extends CI_Pagination
 
         $config['first_url'] = $config['base_url'];
         $config['per_page'] = isset($config['per_page']) ? $config['per_page'] : $this->per_page;
-        $config['offset'] = max(0, (is_int(intval($config['cur_page'])) ? $config['cur_page'] : 0) - 1) * $config['per_page'];
+        $config['offset'] = max(0, ($config['cur_page'] ? is_int(intval($config['cur_page'])) : 0) - 1) * $config['per_page'];
         $config['num_links'] = floor($config['total_rows'] / $config['per_page']);
         $config['use_page_numbers'] = true;
         $config['reuse_query_string'] = true;

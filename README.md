@@ -61,6 +61,13 @@ Table: configs
 * DAY_START_AC --int. start hari ac. sistem akan mencari ac terbit sejak tanggal ini (NEGATIVE VALUE)
 ```
 
+> DEMO
+> DIALOGWA_TOKEN : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjNiMjIyZWY1MmJjMzc4MDYxM2U1OSIsInVzZXJuYW1lIjoiY2hhbmRyYSIsImlhdCI6MTcxNzc0Nzc4NywiZXhwIjo0ODczNTA3Nzg3fQ.KIqEs7rELJzVj2hk6WJqCiYy0T0Mz7G5vbiy4gFLRQ0
+> DIALOGWA_SESSION : demo
+>
+> Bila token dan session di atas tidak berlaku, silakan chat ke https://s.dialogwa.id/65850d570cf40ef71be32406_admin untuk mendapatkan token dan session baru
+
+
 
 ###  DISABLE / ENABLE JENIS NOTIFIKASI
 File: application\helpers\template_helper.php

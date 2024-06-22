@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `tref_menu` (
 /*!40000 ALTER TABLE `tref_menu` DISABLE KEYS */;
 INSERT INTO `tref_menu` (`id`, `label`, `parent`, `icon`, `iconClass`, `menuClass`, `url`, `order`, `status`) VALUES
 	(1, 'Daftar Kirim', NULL, 'clock-o', NULL, NULL, 'whatsapp/next', 1, 1),
-	(2, 'Riwayat Notifikasi', NULL, 'commenting-o', NULL, NULL, 'whatsapp', 2, 1);
+	(2, 'Riwayat Notifikasi', NULL, 'whatsapp', NULL, NULL, 'whatsapp', 2, 1);
 /*!40000 ALTER TABLE `tref_menu` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

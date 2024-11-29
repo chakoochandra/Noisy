@@ -8,7 +8,7 @@
     }
 </style>
 
-<nav id="my-navbar" class="<?php echo get_layout_classes((!isset($navbarClass) ? 'navbar' : $navbarClass)) ?> <?php echo $this->session->userdata('disableApiRequest') ? 'bg-red' : '' ?>">
+<nav id="my-navbar" class="main-header main-header-plain navbar navbar-expand navbar-dark bg-dark">
     <ul class="navbar-nav">
         <?php if ($menus): ?>
             <li class="nav-item">

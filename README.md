@@ -37,10 +37,8 @@ Duplikasi file index.example.php, file hasil duplikat rename menjadi index.php
 
 ###  SQL
 File: sql\noisy.sql
-File: sql\tmst_web_noisy.sql
 
 Buat database dengan cara menjalankan noisy.sql
-Lalu jalankan juga tmst_web_noisy.sql
 
 
 ###  MODIFIKASI KONFIGURASI DATABASE

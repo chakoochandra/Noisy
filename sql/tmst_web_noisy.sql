@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `tmst_web` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=latin1;
 
--- Dumping data for table noisy.tmst_web: ~97 rows (approximately)
+-- Dumping data for table noisy.tmst_web: ~75 rows (approximately)
 /*!40000 ALTER TABLE `tmst_web` DISABLE KEYS */;
 INSERT INTO `tmst_web` (`id`, `name`, `url`, `category`, `icon`, `order`, `icon_width`, `icon_height`, `is_active`) VALUES
 	(1, 'Mahkamah Agung RI', 'https://mahkamahagung.go.id', 'MA', 'ma.png', 1, NULL, NULL, 1),
@@ -102,7 +102,8 @@ INSERT INTO `tmst_web` (`id`, `name`, `url`, `category`, `icon`, `order`, `icon_
 	(83, 'LLK', 'https://llk.mahkamahagung.go.id/', 'MA', 'llk.png', NULL, NULL, NULL, 1),
 	(84, 'PNBP', 'https://pnbp.mahkamahagung.go.id/', 'MA', 'pnbp.png', NULL, NULL, NULL, 1),
 	(85, 'TTE SIMARI', 'https://simari.mahkamahagung.go.id/tte', 'MA', 'tte.png', NULL, NULL, NULL, 1),
-	(92, 'Jadwal Sidang', 'https://ptsp.pa-sidoarjo.go.id/daftar_antrian_sidang', 'Web', 'sijangkar.png', NULL, NULL, NULL, 1);
+	(92, 'Jadwal Sidang', 'https://ptsp.pa-sidoarjo.go.id/daftar_antrian_sidang', 'Web', 'sijangkar.png', NULL, NULL, NULL, 1),
+	(98, 'Notifikasi Whatsapp', 'whatsapp/next', 'Lokal', 'ecourt-putus.png', 0, NULL, NULL, 1);
 /*!40000 ALTER TABLE `tmst_web` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -65,7 +65,7 @@ $menus = get_or_set_menu();
 
 <aside id="my-sidebar" class="main-sidebar elevation-4 sidebar-dark-primary">
     <a href="<?php echo base_url("/") ?>" class="d-flex brand-link">
-        <img src="<?php echo base_url('assets/images/icon.jpg') ?>" alt="Logo <?php echo APP_SHORT_NAME ?>" class="brand-image" style="opacity: .8;">
+        <img src="<?php echo base_url('assets/images/icon.png') ?>" alt="Logo <?php echo APP_SHORT_NAME ?>" class="brand-image" style="opacity: .8;">
         <span class="brand-text font-weight-bold"><?php echo APP_SHORT_NAME ?></span>
     </a>
 
@@ -74,7 +74,7 @@ $menus = get_or_set_menu();
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image justify-content-center align-self-center">
-                <img src="<?php echo base_url('assets/images/icon.jpg') ?>" class="img-circle elevation-4" alt="User" style="object-fit: cover;">
+                <img src="<?php echo base_url('assets/images/icon.png') ?>" class="img-circle elevation-4" alt="User" style="object-fit: cover;">
             </div>
             <div class="info" style="line-height: 1;">
                 Admin

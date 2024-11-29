@@ -18,3 +18,9 @@ $hook['post_controller_constructor'][] = array(
     'filename' => 'Configs.php',
     'filepath' => 'hooks'
 );
+$hook['pre_system'][] = array(
+    'class'    => 'Configs',
+    'function' => 'check_system',
+    'filename' => 'Configs.php',
+    'filepath' => 'hooks'
+);

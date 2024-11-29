@@ -3,6 +3,8 @@ Whatsapp Notification System.
 
 Didevelop untuk Pengadilan Agama. Untuk Peradilan lainnya, silakan modifikasi sesuai kebutuhan dan data masing2. Boleh Pull Request kalau mau sharing hasil modifikasi.
 
+Mau bertanya? Silakan chat ke https://dialogwa.id/chat/6287778299688
+
 ####  Daftar Kirim
 ![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/1_noisy_daftar_kirim.png?raw=true)
 
@@ -35,8 +37,10 @@ Duplikasi file index.example.php, file hasil duplikat rename menjadi index.php
 
 ###  SQL
 File: sql\noisy.sql
+File: sql\tmst_web_noisy.sql
 
 Buat database dengan cara menjalankan noisy.sql
+Lalu jalankan juga tmst_web_noisy.sql
 
 
 ###  MODIFIKASI KONFIGURASI DATABASE
@@ -68,7 +72,7 @@ Table: configs
 DIALOGWA_TOKEN : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjNiMjIyZWY1MmJjMzc4MDYxM2U1OSIsInVzZXJuYW1lIjoiY2hhbmRyYSIsImlhdCI6MTcxNzc0Nzc4NywiZXhwIjo0ODczNTA3Nzg3fQ.KIqEs7rELJzVj2hk6WJqCiYy0T0Mz7G5vbiy4gFLRQ0
 DIALOGWA_SESSION : demo
 
-Bila token dan session di atas tidak berlaku, silakan chat ke https://s.dialogwa.id/65850d570cf40ef71be32406_admin untuk mendapatkan token dan session baru
+Bila token dan session di atas tidak berlaku, silakan chat ke https://dialogwa.id/chat/6287778299688 untuk mendapatkan token dan session baru
 ```
 <br /> <br /> <br /> 
 

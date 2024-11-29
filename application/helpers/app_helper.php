@@ -35,6 +35,71 @@ if (!function_exists('get_client_ip')) {
             $ipaddress = 'UNKNOWN';
         return $ipaddress;
     }
+
+    function is_local_ip()
+    {
+        $client_ip = get_client_ip();
+        if ($client_ip !== 'UNKNOWN') {
+            // Define the ranges for local IP addresses (IPv4)
+            $local_ranges_v4 = [
+                '10.0.0.0|10.255.255.255',        // Class A private network
+                '172.16.0.0|172.31.255.255',      // Class B private network
+                '192.168.0.0|192.168.255.255',    // Class C private network
+                '127.0.0.0|127.255.255.255'       // Loopback address
+            ];
+
+            // Define the local IP addresses (IPv6)
+            $local_ips_v6 = [
+                '::1'                             // IPv6 loopback address
+            ];
+
+            // Check if the IP is an IPv4 address
+            if (filter_var($client_ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+                $ip_long = ip2long($client_ip);
+                if ($ip_long !== false) {
+                    foreach ($local_ranges_v4 as $range) {
+                        list($start, $end) = explode('|', $range);
+                        if ($ip_long >= ip2long($start) && $ip_long <= ip2long($end)) {
+                            return true;
+                        }
+                    }
+                }
+            } elseif (filter_var($client_ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+                // Check if the IP is an IPv6 address
+                if (in_array($client_ip, $local_ips_v6)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+
+if (!function_exists('number_format_indo')) {
+    function number_format_indo($number)
+    {
+        return number_format($number, 0, ',', '.');
+    }
+}
+
+if (!function_exists('getColor')) {
+    function getColor($value, $max = 100)
+    {
+        $percentage = $value * 100 / $max;
+        if ($percentage > 100) {
+            return 'red'; //kalau persentase lebih dari 100%, cek maksimal jumlah cuti pertahun
+        } else if ($percentage == 100) {
+            return '#AAFF00';
+        } else if ($percentage > 75) {
+            return '#00c0ef';
+        } else if ($percentage > 50) {
+            return '#3c8dbc';
+        } else if ($percentage > 0) {
+            return '#FEB139';
+        } else {
+            return '#f56954';
+        }
+    }
 }
 
 if (!function_exists('is_development')) {
@@ -336,6 +401,10 @@ if (!function_exists('file_url')) {
     function file_url($folder, $filename = null)
     {
         return $filename && file_exists(FOLDER_ROOT_UPLOAD  . $folder . '/' . $filename) ? base_url(FOLDER_ROOT_UPLOAD . $folder . '/' . $filename) : null;
+    }
+    function file_url2($path)
+    {
+        return $path && file_exists($path) ? base_url($path) : null;
     }
 }
 

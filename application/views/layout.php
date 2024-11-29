@@ -29,9 +29,13 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/glow.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/busy-load.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url((!isset($isPrivate) || $isPrivate ? 'assets/particles/particles.css' : 'assets/particles/particles-gray.css')) ?>">
 
     <!-- bootstrap datepicker -->
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap-datepicker/bootstrap-datepicker.min.css') ?>">
+
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/AdminLTE-3.2.0/plugins/select2/css/select2.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/AdminLTE-3.2.0/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') ?>">
 
     <!-- jQuery -->
     <script src="<?php echo base_url('assets/vendor/AdminLTE-3.2.0/plugins/jquery/jquery.min.js') ?>"></script>
@@ -41,6 +45,10 @@
 
     <script src="<?php echo base_url('assets/js/jquery-ui.min.js') ?>"></script>
     <script src="<?php echo base_url('assets/js/busy-load.min.js') ?>"></script>
+
+    <!-- moment -->
+    <script src="<?php echo base_url('assets/vendor/moment/moment.js') ?>"></script>
+    <script src="<?php echo base_url('assets/vendor/moment/locale/id.js') ?>"></script>
 </head>
 
 <body id="my-layout" class="sidebar-mini layout-footer-fixed layout-navbar-fixed layout-fixed dark-mode">
@@ -52,12 +60,22 @@
 
         <div class="container-fluid text-right"><span style="font-size: x-small;"><?php echo get_client_ip() ?></span></div>
 
+        <?php $showParticles = !(isset($hideParticles) && $hideParticles) ?>
+
+        <?php if ($showParticles) : ?>
+            <div id="particles-js"></div>
+        <?php endif ?>
+
         <div class="content-wrapper" style="min-height: 393px;">
             <section class="content container-main">
                 <?php $this->load->view($main_body) ?>
             </section>
         </div>
+
+        <?php $this->load->view('_footer') ?>
     </div>
+
+    <script src="<?php echo base_url('assets/vendor/AdminLTE-3.2.0/plugins/select2/js/select2.full.min.js') ?>"></script>
 
     <script type="text/javascript">
         <?php if ($this->session->flashdata('welcome')) : ?>
@@ -65,9 +83,15 @@
                 title: 'Selamat Datang <?php echo $this->user->nama_lengkap ?>!',
             });
         <?php endif ?>
-    </script>
 
-    <?php $this->load->view('_footer') ?>
+        $(document).ready(function() {
+            var showParticles = '<?php echo $showParticles ? 1 : 0 ?>' == 1;
+            if (showParticles) {
+                particlesJS.load('particles-js', '<?php echo base_url((!isset($isPrivate) || $isPrivate ? 'assets/particles/particles.json' : 'assets/particles/particles-gray.json')) ?>', function() {});
+            }
+        });
+    </script>
+    <script src="<?php echo base_url('assets/particles/particles.min.js') ?>"></script>
 </body>
 
 </html>

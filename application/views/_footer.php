@@ -1,5 +1,21 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/waviy.css') ?>">
 
+<footer class="main-footer p-1" style="margin-left: <?php echo isset($hasNavigation) && $hasNavigation ? '250px' : '0 !important' ?>;">
+    <!-- <div class="copyright text-center">
+            <marquee behavior="scroll" direction="left" scrollamount="5" scrolldelay="50" class="big">Visi : "Terwujudnya Pengadilan Agama Sidoarjo Yang Agung. Misi : 1. Menjaga kemandirian Aparatur Pengadilan Agama; 2. Meningkatkan kualitas pelayanan hukum yang berkeadilan, kredibel dan transparan; 3. Mewujudkan kesatuan hukum sehingga diperoleh kepastian hukum bagi masyarakat; 4. Meningkatkan pengawasan dan pembinaan;"</marquee>
+        </div> -->
+
+    <div class="d-sm-none d-xs-flex flex-column text-xs">
+        <div class="text-center"><strong>Copyright &copy; <?php echo date('Y') ?> <a href="https://dialogwa.id" target="_blank">CHAKO</a>.</strong> All rights reserved.</div>
+        <div class="text-center"><b>Versi</b> <?php echo APP_VERSION ?></div>
+    </div>
+
+    <div class="d-none d-sm-flex justify-content-center">
+        <div class="mx-2"><strong>Copyright &copy; <?php echo date('Y') ?> <a href="https://dialogwa.id" target="_blank">CHAKO</a>.</strong> All rights reserved.</div>
+        <div class="mx-2"><span>IP Anda: <?php echo get_client_ip() ?></span> | <b>Versi</b> <?php echo APP_VERSION ?></div>
+    </div>
+</footer>
+
 <div class="modal fade" id="modal-input" role="dialog" style="z-index: 1040;">
     <div id="modal-input-dialog" class="modal-dialog modal-md">
         <div class="modal-content">

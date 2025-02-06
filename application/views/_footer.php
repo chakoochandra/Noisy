@@ -6,12 +6,12 @@
         </div> -->
 
     <div class="d-sm-none d-xs-flex flex-column text-xs">
-        <div class="text-center"><strong>Copyright &copy; <?php echo date('Y') ?> <a href="https://dialogwa.id" target="_blank">CHAKO</a>.</strong> All rights reserved.</div>
+        <div class="text-center"><strong>Copyright &copy; <?php echo date('Y') ?> <a href="https://dialogwa.web.id" target="_blank">CHAKO</a>.</strong> All rights reserved.</div>
         <div class="text-center"><b>Versi</b> <?php echo APP_VERSION ?></div>
     </div>
 
     <div class="d-none d-sm-flex justify-content-center">
-        <div class="mx-2"><strong>Copyright &copy; <?php echo date('Y') ?> <a href="https://dialogwa.id" target="_blank">CHAKO</a>.</strong> All rights reserved.</div>
+        <div class="mx-2"><strong>Copyright &copy; <?php echo date('Y') ?> <a href="https://dialogwa.web.id" target="_blank">CHAKO</a>.</strong> All rights reserved.</div>
         <div class="mx-2"><span>IP Anda: <?php echo get_client_ip() ?></span> | <b>Versi</b> <?php echo APP_VERSION ?></div>
     </div>
 </footer>

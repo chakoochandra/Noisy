@@ -3,7 +3,7 @@
 # contoh cron kirim notifikasi sidang setiap jam 09.00 dan 18.00
 # 0 9,18 * * * /var/www/html/noisy/cron/notif_sidang.sh
 
-TOKEN="isi_dengan_token_dialogwa.id"
+TOKEN="isi_dengan_token_dialogwa.web.id"
 NOTIF_URL="isi_dengan_url_aplikasi_noisy" 
 
 # NOTIF_URL adalah url notifikasi sesuai kategori notifikasi yang akan diotomatisasi

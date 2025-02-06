@@ -3,7 +3,7 @@ Whatsapp Notification System.
 
 Didevelop untuk Pengadilan Agama. Untuk Peradilan lainnya, silakan modifikasi sesuai kebutuhan dan data masing2. Boleh Pull Request kalau mau sharing hasil modifikasi.
 
-Mau bertanya? Silakan chat ke https://dialogwa.id/chat/6287778299688
+Mau bertanya? Silakan chat ke https://dialogwa.web.id/chat/6287778299688
 
 ####  Daftar Kirim
 ![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/1_noisy_daftar_kirim.png?raw=true)
@@ -45,14 +45,15 @@ Buat database dengan cara menjalankan noisy.sql
 Table: configs
 
 ```
+* APP_TOKEN --string. token aplikasi
 * APP_VERSION
 * APP_NAME 
 * APP_SHORT_NAME
 * SATKER_NAME
 * SATKER_ADDRESS
-* DIALOGWA_API_URL --string. url api dialogwa.id
-* DIALOGWA_TOKEN --string. token dialogwa.id
-* DIALOGWA_SESSION --string. sesi online dialogwa.id
+* DIALOGWA_API_URL --string. url api dialogwa.web.id
+* DIALOGWA_TOKEN --string. token dialogwa.web.id
+* DIALOGWA_SESSION --string. sesi online dialogwa.web.id
 * WA_TEST_TARGET --string. nomor WA untuk tes penerima notifikasi
 * DAY_START_ANTRIAN --int. start hari sidang. sistem akan mencari jadwal sidang mulai tanggal ini
 * DAY_END_ANTRIAN --int. end hari sidang. sistem akan mencari jadwal sidang sampai tanggal ini
@@ -65,12 +66,16 @@ Table: configs
 
 
 <br /><br />
+
+APP_TOKEN : untuk mendapatkan token aplikasi, silakan chat ke https://dialogwa.web.id/chat/6287778299688
+
+<br /><br />
 **DEMO**
 ```
 DIALOGWA_TOKEN : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjNiMjIyZWY1MmJjMzc4MDYxM2U1OSIsInVzZXJuYW1lIjoiY2hhbmRyYSIsImlhdCI6MTcxNzc0Nzc4NywiZXhwIjo0ODczNTA3Nzg3fQ.KIqEs7rELJzVj2hk6WJqCiYy0T0Mz7G5vbiy4gFLRQ0
 DIALOGWA_SESSION : demo
 
-Bila token dan session di atas tidak berlaku, silakan chat ke https://dialogwa.id/chat/6287778299688 untuk mendapatkan token dan session baru
+Bila token dan session di atas tidak berlaku, silakan chat ke https://dialogwa.web.id/chat/6287778299688 untuk mendapatkan token dan session baru
 ```
 <br /> <br /> <br /> 
 
@@ -102,7 +107,7 @@ Bila diperlukan otomatisasi, contoh script ada di : folder cron\notif_sidang.sh
 Pada file tersebut, modifikasi variabel :
 
 ```
-TOKEN="isi_dengan_token_dialogwa.id"
+TOKEN="isi_dengan_token_dialogwa.web.id"
 NOTIF_URL="isi_dengan_url_aplikasi_noisy" 
 ```
 

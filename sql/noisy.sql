@@ -49,9 +49,9 @@ INSERT INTO `configs` (`id`, `key`, `value`, `category`, `note`) VALUES
 	(3, 'APP_SHORT_NAME', 'NOISY', 5, 'string. nama pendek aplikasi. [BACKUP - NANTI DIHAPUS]'),
 	(4, 'SATKER_NAME', 'Pengadilan Agama ABC', 1, 'string. nama satker'),
 	(5, 'SATKER_ADDRESS', 'Jalan ABC No. 123', 1, 'string. nama satker'),
-	(6, 'DIALOGWA_API_URL', 'https://dialogwa.id/api', 2, 'string. url api dialogwa.id'),
-	(7, 'DIALOGWA_TOKEN', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjNiMjIyZWY1MmJjMzc4MDYxM2U1OSIsInVzZXJuYW1lIjoiY2hhbmRyYSIsImlhdCI6MTcxNzc0Nzc4NywiZXhwIjo0ODczNTA3Nzg3fQ.KIqEs7rELJzVj2hk6WJqCiYy0T0Mz7G5vbiy4gFLRQ0', 2, 'string. token dialogwa.id'),
-	(8, 'DIALOGWA_SESSION', 'demo', 2, 'string. sesi online dialogwa.id'),
+	(6, 'DIALOGWA_API_URL', 'https://dialogwa.web.id/api', 2, 'string. url api dialogwa.web.id'),
+	(7, 'DIALOGWA_TOKEN', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjNiMjIyZWY1MmJjMzc4MDYxM2U1OSIsInVzZXJuYW1lIjoiY2hhbmRyYSIsImlhdCI6MTcxNzc0Nzc4NywiZXhwIjo0ODczNTA3Nzg3fQ.KIqEs7rELJzVj2hk6WJqCiYy0T0Mz7G5vbiy4gFLRQ0', 2, 'string. token dialogwa.web.id'),
+	(8, 'DIALOGWA_SESSION', 'demo', 2, 'string. sesi online dialogwa.web.id'),
 	(9, 'WA_TEST_TARGET', '', 2, 'string. nomor WA untuk tes penerima notifikasi'),
 	(10, 'DAY_START_ANTRIAN', '1', 3, 'int. start hari sidang. sistem akan mencari jadwal sidang mulai tanggal ini'),
 	(11, 'DAY_END_ANTRIAN', '1', 3, 'int. end hari sidang. sistem akan mencari jadwal sidang sampai tanggal ini'),
@@ -60,6 +60,7 @@ INSERT INTO `configs` (`id`, `key`, `value`, `category`, `note`) VALUES
 	(14, 'DAY_END_CALENDAR', '6', 3, 'int. end hari calendar. sistem akan mencari jadwal agenda sampai tanggal ini'),
 	(15, 'DAY_START_JURNAL', '-30', 3, 'int. start hari jurnal. sistem akan mencari perkara putus sejak tanggal ini (NEGATIVE VALUE)'),
 	(16, 'DAY_START_AC', '-30', 3, 'int. start hari ac. sistem akan mencari ac terbit sejak tanggal ini (NEGATIVE VALUE)');
+	(17, 'APP_TOKEN', '', 5, 'Token aplikasi');
 /*!40000 ALTER TABLE `configs` ENABLE KEYS */;
 
 -- Dumping structure for table noisy.trans_message_whatsapp

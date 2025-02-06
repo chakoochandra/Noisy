@@ -26,11 +26,11 @@ class Api extends Core_Controller
 			exit;
 		}
 		if (!DIALOGWA_TOKEN) {
-			$this->_sendProgress(['progress' => 100, 'message' => 'Variabel DIALOGWA_TOKEN belum diset pada tabel configs. Token didapat dari <strong><a href="https://dialogwa.id/#paket-0" target="blank">https://dialogwa.id</a></strong>']);
+			$this->_sendProgress(['progress' => 100, 'message' => 'Variabel DIALOGWA_TOKEN belum diset pada tabel configs. Token didapat dari <strong><a href="https://dialogwa.web.id/#paket-0" target="blank">https://dialogwa.web.id</a></strong>']);
 			exit;
 		}
 		if (!DIALOGWA_SESSION) {
-			$this->_sendProgress(['progress' => 100, 'message' => 'Variabel DIALOGWA_SESSION belum diset pada tabel configs. Buat sesi di <strong><a href="https://dialogwa.id/#paket-0" target="blank">https://dialogwa.id</a></strong>']);
+			$this->_sendProgress(['progress' => 100, 'message' => 'Variabel DIALOGWA_SESSION belum diset pada tabel configs. Buat sesi di <strong><a href="https://dialogwa.web.id/#paket-0" target="blank">https://dialogwa.web.id</a></strong>']);
 			exit;
 		}
 

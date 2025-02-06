@@ -1,8 +1,5 @@
 .DS_Store
 
-application/cache/*
-application/logs/*
-
 composer.lock
 
 user_guide_src/build/*
@@ -25,3 +22,11 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 application/config/database.php
 /index.php
+
+application/cache/*
+
+# Ignore everything inside application/logs/
+application/logs/*
+# But do not ignore the logs folder itself
+!application/logs/
+!.gitignore

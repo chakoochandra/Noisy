@@ -4,7 +4,7 @@
         position: sticky;
         top: 0;
         z-index: 1030;
-        background-color: #343a40;
+        background-color: rgb(52, 58, 64, .5) !important;
     }
 </style>
 

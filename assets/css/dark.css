@@ -136,8 +136,7 @@
 }
 
 .dark-mode .card {
-	background-color: #343a40;
-	color: #fff;
+	background-color: rgb(63 71 78 / 50%) !important;
 }
 
 .dark-mode .card .overlay {

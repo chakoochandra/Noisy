@@ -5,6 +5,9 @@ Didevelop untuk Pengadilan Agama. Untuk Peradilan lainnya, silakan modifikasi se
 
 Mau bertanya? Silakan chat ke https://dialogwa.web.id/chat/6287778299688
 
+####  Dashboard
+![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/0_dashboard.png?raw=true)
+
 ####  Daftar Kirim
 ![alt text](https://github.com/chakoochandra/Noisy/blob/main/assets/images/ss/1_noisy_daftar_kirim.png?raw=true)
 

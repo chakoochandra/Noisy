@@ -7,7 +7,7 @@
     <div class="lockscreen-footer text-center">
         Atau Anda ingin mensupport saya?
         <br />
-        <strong><a target="_blank" href="https://trakteer.id/dialogwa/tip">Traktir saya segelas kopi!</a></strong>
+        <strong><a target="_blank" href="https://trakteer.id/dialogwa/tip">Traktir saya cendol!</a></strong>
     </div>
 
     <div class="lockscreen-footer text-center">Kembali ke <a target="_blank" href="<?php echo base_url('/') ?>">halaman utama</a></div>

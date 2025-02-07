@@ -165,3 +165,7 @@ Untuk mengotomatisasi notifikasi yang lain, duplikasi file tersebut lalu modifik
 > ```
 > define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
 > ```
+
+
+## SUPPORT SAYA
+Anda ingin mensupport saya? **[Traktir saya segelas kopi!](https://trakteer.id/dialogwa/tip)**

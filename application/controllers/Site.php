@@ -33,6 +33,18 @@ class Site extends Core_Controller
         $this->load->view('layout_no_sidebar');
     }
 
+    function about()
+    {
+        $this->load->vars([
+            'main_body' => 'layout_content',
+            'view' => 'site/about',
+        ]);
+
+        $this->load->vars($this->vars);
+
+        $this->load->view('layout_no_sidebar');
+    }
+
     function get_ratio()
     {
         $this->load->model('Ratio_Model', 'ratio');

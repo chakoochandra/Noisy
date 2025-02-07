@@ -17,7 +17,7 @@
         <?php endif ?>
 
         <?php if (isset($navbarClass) && $navbarClass == 'navbar-plain'): ?>
-            <a href="<?php echo base_url("/") ?>" class="d-flex brand-link p-0">
+            <a target="_blank" href="<?php echo base_url("site/about") ?>" class="d-flex brand-link p-0">
                 <img src="<?php echo base_url('assets/images/icon.png') ?>" alt="Logo <?php echo APP_SHORT_NAME ?>" class="brand-image" style="opacity: .8;">
                 <span class="brand-text font-weight-bold"><?php echo APP_SHORT_NAME ?></span>
             </a>

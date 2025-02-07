@@ -115,7 +115,7 @@
     </div>
 </section>
 
-<a href="#" class="fixed-bottom-right"><img src="<?php echo base_url('assets/images/arrow_up.svg') ?>" width="30" height="30" alt="Kembali ke atas" /></a>
+<a href="#" class="fixed-bottom-right mb-4"><img src="<?php echo base_url('assets/images/arrow_up.svg') ?>" width="30" height="30" alt="Kembali ke atas" /></a>
 
 <script src="<?php echo base_url('assets/js/js.cookie.min.js') ?>"></script>
 <script>
